@@ -59,7 +59,7 @@ fun MovieScreen(navController: NavController,viewModel:MoviesViewModel = hiltVie
             LazyColumn(modifier = Modifier.fillMaxSize()){
                 items(state.movies){ movie ->
                     MovieListRow(movie = movie){
-                        //navController.navigate(Screen.MovieDetailScreen.route+"id")
+                        navController.navigate(Screen.MovieDetailScreen.route+"/${movie.imdbID}")
                     }
                 }
             }
